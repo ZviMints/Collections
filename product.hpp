@@ -46,8 +46,8 @@ template <typename T1, typename T2> class product {
           running_pointer(b.end()), t2_begin(b.end()), t2_end(b.end()) {} 
           
         iterator& operator++() {
-        if( running_pointer != t2_end - 1 ) ++ running_pointer;
-        else
+        ++running_pointer;
+        if(!(running_pointer != t2_end)) 
         {
             ++ t1_begin;
             running_pointer = t2_begin;
