@@ -44,6 +44,10 @@ int main() {
 	auto c1_start = c1.begin();
 	auto c1_end = c1.end();
 
+	auto c2 = chain(string("BestTestsInTheWorld"),string("Please100!"));
+	auto c2_start = c2.begin();
+	auto c2_end = c2.end();
+
 	auto z1 = zip(r1,r2);
 	auto z1_start = z1.begin();
 	auto z1_end = z1.end();
@@ -83,6 +87,14 @@ int main() {
 	ans = "helloabcdefghijklmnopqrstuvwxy";
 	curr = "";
 	for(char p : c1 ) {
+	curr += p;  
+	}
+	testcase.CHECK_OUTPUT(curr, ans);  
+
+	counter = 0;
+	ans = "BestTestsInTheWorldPlease100!";
+	curr = "";
+	for(char p : c2 ) {
 	curr += p;  
 	}
 	testcase.CHECK_OUTPUT(curr, ans);  
