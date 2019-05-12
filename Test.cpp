@@ -27,7 +27,12 @@ int main() {
 	int signal = setjmp(badkan::longjmp_buffer);
 	if (signal == 0) {
 
-		// BASIC TESTS - DO NOT CHANGE
+		testcase.setname("Zvi Mints Tests")
+		//.CHECK_EQUAL(play(c1234, g1234, 4, 100), 1)      // guesser wins in one turn.
+		
+		//.CHECK_OUTPUT(calculateBullAndPgia("1234","1234"), "4,0")      // 4 bull, 0 pgia
+
+
 
    	grade = testcase.grade();
 	} else {

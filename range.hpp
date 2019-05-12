@@ -1,4 +1,3 @@
-
 #ifndef RANGE_HPP
 #define RANGE_HPP
 
@@ -12,7 +11,7 @@ template <typename T> class range {
         public:
         range(const T& begin,const T& end) : a(begin), b(end) {}
         struct iterator {
-        iterator(const T& p) :type(p) {} 
+        iterator(const T& p) : type(p) {} 
         iterator& operator++(){ ++type; return *this; } 
         T& operator*() { return type; } 
         bool operator!=(const iterator& iter) { return type != iter.type; }
